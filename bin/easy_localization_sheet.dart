@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:easy_localization_sheet/sheet_parser.dart' as sheet_parser;
 import 'package:easy_localization_sheet/utils.dart' as utils;
 
@@ -9,8 +11,10 @@ void main(List<String> arguments) async {
       sheetFile: sheetFile,
       outputRelatedPath: configs.outputDir,
     );
+    print('Generate successful');
   } catch (e) {
     print(e.toString());
     rethrow;
   }
+  exit(0);
 }
