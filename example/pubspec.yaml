@@ -1,0 +1,16 @@
+name: example
+description: A sample command-line application.
+publish_to: none
+version: 1.0.0
+# repository: https://github.com/my_org/my_repo
+
+environment:
+  sdk: '>=2.19.6 <3.0.0'
+
+dev_dependencies:
+  easy_localization_sheet:
+    path: ../
+
+easy_localization_sheet:
+  csv_url: 'https://docs.google.com/spreadsheets/d/1p6oQw6BKObb3RU_fIWskJjofRzEb01cfzfNE14Px4nw/export?format=csv'
+  output_path: 'assets/translations' # Optional, default is assets

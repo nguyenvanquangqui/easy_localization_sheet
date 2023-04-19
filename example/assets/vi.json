@@ -1,0 +1,9 @@
+{
+  "hello_double": "Xin Chao, xin chao \"Q\"",
+  "gender": {
+    "male": "Nam",
+    "female": "Nu"
+  },
+  "fullName": "Tên đầy đủ",
+  "emptyNameError": "Vui lòng điền @.lower:example.fullName của bạn"
+}

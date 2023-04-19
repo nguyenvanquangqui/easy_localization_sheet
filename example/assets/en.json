@@ -1,0 +1,9 @@
+{
+  "hello_double": "Hello, hello",
+  "gender": {
+    "male": "Male",
+    "female": "Female"
+  },
+  "fullName": "Full Name",
+  "emptyNameError": "Please fill in your @.lower:example.fullName"
+}
