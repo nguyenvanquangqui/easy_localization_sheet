@@ -1,5 +1,5 @@
 {
-  "hello_double": "Hello, hello",
+  "message": "Hello!",
   "gender": {
     "male": "Male",
     "female": "Female"

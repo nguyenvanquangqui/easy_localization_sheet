@@ -1,8 +1,8 @@
 {
-  "hello_double": "Xin Chao, xin chao \"Q\"",
+  "message": "Xin chào!",
   "gender": {
     "male": "Nam",
-    "female": "Nu"
+    "female": "Nữ"
   },
   "fullName": "Tên đầy đủ",
   "emptyNameError": "Vui lòng điền @.lower:example.fullName của bạn"
