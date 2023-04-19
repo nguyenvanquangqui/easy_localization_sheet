@@ -1,8 +1,9 @@
 # easy_localization_sheet
-Download the csv file and generate json files for [easy_localization](https://pub.dev/packages/easy_localization) or any package that supports localization from json
+Download the csv file and generate json files for [easy_localization](https://pub.dev/packages/easy_localization) or any package that supports localization from json.
+**This package generates json files only. Let your localization package do the rest with generated files.**
 
 ### Installation
-Add to your `pubspec.yaml`:
+Add to your project:
 `dart pub add --dev easy_localization_sheet` or `dart pub add --dev easy_localization_sheet`
 Your `pubspec.yaml` will look like below:
 ```
@@ -21,7 +22,6 @@ easy_localization_sheet:
 ```
 
 Then run `dart run easy_localization_sheet` or `flutter pub run easy_localization_sheet`
-*** This package generates json files only. Let your localization package do the rest with `output_dir`***
 ### Example
 [Example sheet available here](https://docs.google.com/spreadsheets/d/1p6oQw6BKObb3RU_fIWskJjofRzEb01cfzfNE14Px4nw/edit#gid=0)
 ![csv example file](/images/sheet_screenshot.png)
@@ -44,4 +44,4 @@ gender.female
     "female": "Female"
 }
 ```
-Visit example sheet for more detail.
+Visit example sheet for more detail
