@@ -24,6 +24,10 @@ Future parseSheet({required File sheetFile, String? outputRelatedPath}) async {
   final languageColumnIndexes = <String, int>{};
   final supportedLanguages = header.toList()..removeAt(0);
   supportedLanguages.removeWhere((element) => element.startsWith('('));
+
+  if (supportedLanguages.isEmpty) {
+    throw Exception('Supported languages not found');
+  }
   for (final language in supportedLanguages) {
     languageColumnIndexes[language] = header.indexOf(language);
   }
