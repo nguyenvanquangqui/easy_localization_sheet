@@ -1,0 +1,6 @@
+key,en,vi
+hello_double,"Hello, hello","Xin Chao, xin chao ""Q"""
+gender.male,Male,Nam
+gender.female,Female,Nu
+fullName,Full Name,Tên đầy đủ
+emptyNameError,Please fill in your @.lower:example.fullName,Vui lòng điền @.lower:example.fullName của bạn
