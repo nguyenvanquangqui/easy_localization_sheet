@@ -6,7 +6,7 @@ import 'package:path/path.dart' as path;
 import 'package:test/test.dart';
 
 const expectedResultInEn = '''{
-  "hello_double": "Hello, hello",
+  "message": "Hello!",
   "gender": {
     "male": "Male",
     "female": "Female"
@@ -51,7 +51,7 @@ void main() {
 
   test('Parse csv', () async {
     final input = File(
-      path.join(Directory.current.path, 'sample', 'input.csv'),
+      path.join(Directory.current.path, 'assets', 'input.csv'),
     );
     final outputDir = Directory(path.join(Directory.current.path, 'generated'));
     if (outputDir.existsSync()) {
