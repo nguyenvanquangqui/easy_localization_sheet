@@ -12,7 +12,13 @@ const expectedResultInEn = '''{
     "female": "Female"
   },
   "fullName": "Full Name",
-  "emptyNameError": "Please fill in your @.lower:example.fullName"
+  "emptyNameError": "Please fill in your @.lower:example.fullName",
+  "money": {
+    "zero": "You not have money",
+    "one": "You have {} dollar",
+    "many": "You have {} dollars",
+    "other": "You have {} dollars"
+  }
 }''';
 
 void main() {
