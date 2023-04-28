@@ -1,5 +1,5 @@
 Title of sheet,,,
-key,(Description - ingore column),en,vi
+key,(Description - ingore column),en,vi-VN
 message,Some desciption,Hello!,Xin chào!
 gender.male,"Add dit between two work will make nested field like this:
 ""gender"": {
@@ -8,3 +8,7 @@ gender.male,"Add dit between two work will make nested field like this:
 gender.female,,Female,Nữ
 fullName,,Full Name,Tên đầy đủ
 emptyNameError,Example for easy_localization syntax @.lower:example.fullName,Please fill in your @.lower:example.fullName,Vui lòng điền @.lower:example.fullName của bạn
+money.zero,,You not have money,Bạn không có tiền
+money.one,,You have {} dollar,Bạn có {} đô la
+money.many,,You have {} dollars,Bạn có {} đô la
+money.other,,You have {} dollars,Bạn có {} đô la

@@ -1,9 +1,0 @@
-{
-  "message": "Xin chào!",
-  "gender": {
-    "male": "Nam",
-    "female": "Nữ"
-  },
-  "fullName": "Tên đầy đủ",
-  "emptyNameError": "Vui lòng điền @.lower:example.fullName của bạn"
-}

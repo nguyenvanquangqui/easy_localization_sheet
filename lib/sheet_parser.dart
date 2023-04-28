@@ -43,6 +43,10 @@ Future parseSheet({required File sheetFile, String? outputRelatedPath}) async {
       if (contents[language] == null) {
         contents[language] = <String, dynamic>{};
       }
+      final fullKey = row[0];
+      if (fullKey.isEmpty) {
+        continue;
+      }
       appendContents(
         contents: contents,
         language: language,

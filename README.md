@@ -23,9 +23,14 @@ easy_localization_sheet:
 
 Then run `dart run easy_localization_sheet` or `flutter pub run easy_localization_sheet`
 ### Example
-[Example sheet available here](https://docs.google.com/spreadsheets/d/1p6oQw6BKObb3RU_fIWskJjofRzEb01cfzfNE14Px4nw/edit#gid=0)
+[Example sheet available here](https://docs.google.com/spreadsheets/d/1p6oQw6BKObb3RU_fIWskJjofRzEb01cfzfNE14Px4nw/edit#gid=0).
 ![csv example file](/images/sheet_screenshot.png)
 
+Google sheet example:
+1. Make google sheet public
+2. Extract `SHEET_ID` from Google sheet url: `https://docs.google.com/spreadsheets/d/{SHEET_ID}/edit#gid=0`
+3. Set `csv_url: 'https://docs.google.com/spreadsheets/d/{YOUR_ID}/export?format=csv'`
+4. Run `dart run easy_localization_sheet`
 
 ### Syntax
 - `key` column is required, row contains `key` also called header.

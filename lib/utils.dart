@@ -32,6 +32,5 @@ Future<File> getCSVSheet({required String url, File? destFile}) async {
         path.join(tempDir.path, 'easy_localization_sheet.csv'),
       );
   await response.pipe(file.openWrite());
-  print('Downloaded csv to: ${file.path}');
   return file;
 }
