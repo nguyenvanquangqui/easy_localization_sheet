@@ -7,7 +7,7 @@ gender.male,"Add dit between two work will make nested field like this:
 }",Male,Nam
 gender.female,,Female,Nữ
 fullName,,Full Name,Tên đầy đủ
-emptyNameError,Example for easy_localization syntax @.lower:example.fullName,Please fill in your @.lower:example.fullName,Vui lòng điền @.lower:example.fullName của bạn
+emptyNameError,Example for easy_localization syntax @.lower:fullName,Please fill in your @.lower:fullName,Vui lòng điền @.lower:fullName của bạn
 money.zero,,You not have money,Bạn không có tiền
 money.one,,You have {} dollar,Bạn có {} đô la
 money.many,,You have {} dollars,Bạn có {} đô la
