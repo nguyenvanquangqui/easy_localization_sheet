@@ -93,7 +93,7 @@ void appendContents({
     if (nestedLevel == nestedKeys.length - 1) {
       nestedContent[key] = languageValue;
     } else {
-      var content = nestedContent[key] as Map<dynamic, dynamic>?;
+      var content = nestedContent[key] as Map<String, dynamic>?;
       if (content == null) {
         content = <String, dynamic>{};
         nestedContent[key] = content;
