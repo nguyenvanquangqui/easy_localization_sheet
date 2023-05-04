@@ -23,7 +23,6 @@ easy_localization_sheet:
 
 Then run `dart run easy_localization_sheet` or `flutter pub run easy_localization_sheet`
 ### Example
-[Example sheet available here](https://docs.google.com/spreadsheets/d/1p6oQw6BKObb3RU_fIWskJjofRzEb01cfzfNE14Px4nw/edit#gid=0).
 ![csv example file](/images/sheet_screenshot.png)
 
 Google sheet example:
@@ -49,4 +48,4 @@ gender.female
     "female": "Female"
 }
 ```
-Visit example sheet for more detail
+[Visit example sheet for more detail](https://docs.google.com/spreadsheets/d/1p6oQw6BKObb3RU_fIWskJjofRzEb01cfzfNE14Px4nw/edit#gid=0).
