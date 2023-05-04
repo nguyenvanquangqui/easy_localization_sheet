@@ -1,5 +1,5 @@
 name: easy_localization_sheet
-description: A sample command-line application.
+description: Json generator for csv file
 version: 1.0.0
 repository: https://github.com/nguyenvanquangqui/easy_localization_sheet
 
