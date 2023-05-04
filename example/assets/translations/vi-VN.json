@@ -5,7 +5,7 @@
     "female": "Nữ"
   },
   "fullName": "Tên đầy đủ",
-  "emptyNameError": "Vui lòng điền @.lower:example.fullName của bạn",
+  "emptyNameError": "Vui lòng điền @.lower:fullName của bạn",
   "money": {
     "zero": "Bạn không có tiền",
     "one": "Bạn có {} đô la",

@@ -48,4 +48,4 @@ gender.female
     "female": "Female"
 }
 ```
-[Visit example sheet for more detail](https://docs.google.com/spreadsheets/d/1p6oQw6BKObb3RU_fIWskJjofRzEb01cfzfNE14Px4nw/edit#gid=0).
+[Visit example sheet for more detail](https://docs.google.com/spreadsheets/d/1p6oQw6BKObb3RU_fIWskJjofRzEb01cfzfNE14Px4nw/edit#gid=0)
