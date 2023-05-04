@@ -13,4 +13,4 @@ dev_dependencies:
 
 easy_localization_sheet:
   csv_url: 'https://docs.google.com/spreadsheets/d/1p6oQw6BKObb3RU_fIWskJjofRzEb01cfzfNE14Px4nw/export?format=csv'
-  output_path: 'assets/translations' # Optional, default is assets
+  output_dir: 'assets/translations' # Optional, default is assets
