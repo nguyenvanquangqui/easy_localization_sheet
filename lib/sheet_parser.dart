@@ -4,12 +4,9 @@ import 'dart:io';
 import 'package:csv/csv.dart';
 import 'package:path/path.dart' as path;
 
-Future parseSheet({required File sheetFile, String? outputRelatedPath}) async {
-  final input = sheetFile.openRead();
-  final rows = await input
-      .transform(utf8.decoder)
-      .transform(CsvToListConverter())
-      .toList();
+void parseSheet({required File sheetFile, String? outputRelatedPath}) {
+  final input = sheetFile.readAsStringSync();
+  final rows = CsvToListConverter().convert(input);
   if (rows.length < 2) {
     throw Exception('Invalid csv');
   }
@@ -73,7 +70,7 @@ Future parseSheet({required File sheetFile, String? outputRelatedPath}) async {
       continue;
     }
     final file = File(path.join(outputDir.path, '$language.json'));
-    await file.writeAsString(encoder.convert(content));
+    file.writeAsStringSync(encoder.convert(content), flush: true);
   }
 }
 

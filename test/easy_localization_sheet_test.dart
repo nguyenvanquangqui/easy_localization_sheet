@@ -55,16 +55,16 @@ void main() {
     },
   );
 
-  test('Parse csv', () async {
+  test('Parse csv', () {
     final input = File(
       path.join(Directory.current.path, 'assets', 'input.csv'),
     );
     final outputDir = Directory(path.join(Directory.current.path, 'generated'));
     if (outputDir.existsSync()) {
       outputDir.deleteSync(recursive: true);
-      outputDir.createSync();
+      outputDir.createSync(recursive: true);
     }
-    await parser.parseSheet(sheetFile: input, outputRelatedPath: 'generated');
+    parser.parseSheet(sheetFile: input, outputRelatedPath: 'generated');
     final languagesInSample = ['en', 'vi'];
     final outputLanguages = outputDir
         .listSync()
