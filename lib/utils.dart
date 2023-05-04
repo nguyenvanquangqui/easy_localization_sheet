@@ -20,17 +20,41 @@ Configs getConfig() {
     throw Exception('`csv_url` is required');
   }
 
-  return Configs(csvUrl: csvUrl, outputDir: outputDir);
+  return Configs(
+    csvUrl: csvUrl,
+    outputDir: outputDir,
+    packageName: pubspecYaml['name'],
+  );
 }
 
-Future<File> getCSVSheet({required String url, File? destFile}) async {
+Future<File> getCSVSheet({
+  required String url,
+  File? destFile,
+  String? forPackage,
+}) async {
   final request = await HttpClient().getUrl(Uri.parse(url));
   final response = await request.close();
-  final tempDir = Directory.systemTemp;
   final file = destFile ??
       File(
-        path.join(tempDir.path, 'easy_localization_sheet.csv'),
+        path.join(
+          getTempDir(forPackage: forPackage).path,
+          'data.csv',
+        ),
       );
   await response.pipe(file.openWrite());
   return file;
+}
+
+Directory getTempDir({String? forPackage}) {
+  final tempDir = Directory(
+      path.join(
+        Directory.systemTemp.path,
+        'easy_localization_sheet',
+        forPackage ?? '',
+      ),
+  );
+  if (!tempDir.existsSync()) {
+    tempDir.createSync(recursive: true);
+  }
+  return tempDir;
 }

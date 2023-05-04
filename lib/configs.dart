@@ -1,6 +1,11 @@
 class Configs {
   final String csvUrl;
   final String? outputDir;
+  final String? packageName;
 
-  Configs({required this.csvUrl, this.outputDir});
+  Configs({
+    required this.csvUrl,
+    this.outputDir,
+    this.packageName,
+  });
 }
