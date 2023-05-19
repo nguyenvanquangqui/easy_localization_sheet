@@ -4,6 +4,9 @@ import 'dart:io';
 import 'package:csv/csv.dart';
 import 'package:path/path.dart' as path;
 
+/// Parse content of csv file and write to destination file
+/// [sheetFile] csv source file
+/// [outputRelatedPath] output path
 void parseSheet({required File sheetFile, String? outputRelatedPath}) {
   final input = sheetFile.readAsStringSync();
   final rows = CsvToListConverter().convert(input);
@@ -40,9 +43,8 @@ void parseSheet({required File sheetFile, String? outputRelatedPath}) {
       appendContents(
         contents: contents,
         language: language,
-        columnIndex: languageColumnIndex,
         fullKey: row[0],
-        row: row,
+        languageValue: row[languageColumnIndex],
       );
     }
   }
@@ -67,14 +69,13 @@ void parseSheet({required File sheetFile, String? outputRelatedPath}) {
   }
 }
 
+/// Append value for specific [language] to original [contents]
 void appendContents({
   required Map contents,
   required String language,
-  required int columnIndex,
   required String fullKey,
-  required List<String> row,
+  required String languageValue,
 }) {
-  final languageValue = row[columnIndex];
   Map nestedContent = contents[language];
   final nestedKeys = fullKey.split('.');
   for (int nestedLevel = 0; nestedLevel < nestedKeys.length; nestedLevel++) {

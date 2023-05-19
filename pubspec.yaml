@@ -1,6 +1,6 @@
 name: easy_localization_sheet
 description: Json generator for csv file
-version: 1.0.0
+version: 1.0.1
 repository: https://github.com/nguyenvanquangqui/easy_localization_sheet
 
 environment:
