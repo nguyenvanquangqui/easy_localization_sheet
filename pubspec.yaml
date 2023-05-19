@@ -1,5 +1,5 @@
 name: easy_localization_sheet
-description: Json generator for csv file
+description: A tool to help generate json from csv file. It is useful when used with localization packages.
 version: 1.0.1
 repository: https://github.com/nguyenvanquangqui/easy_localization_sheet
 
