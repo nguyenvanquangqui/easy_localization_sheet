@@ -47,11 +47,11 @@ Future<File> getCSVSheet({
 
 Directory getTempDir({String? forPackage}) {
   final tempDir = Directory(
-      path.join(
-        Directory.systemTemp.path,
-        'easy_localization_sheet',
-        forPackage ?? '',
-      ),
+    path.join(
+      Directory.systemTemp.path,
+      'easy_localization_sheet',
+      forPackage ?? '',
+    ),
   );
   if (!tempDir.existsSync()) {
     tempDir.createSync(recursive: true);

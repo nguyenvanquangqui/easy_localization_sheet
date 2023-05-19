@@ -29,7 +29,7 @@ void parseSheet({required File sheetFile, String? outputRelatedPath}) {
   for (int rowIndex = 1; rowIndex < rows.length; rowIndex++) {
     final row = rows[rowIndex].map((e) => e.toString()).toList();
     for (var language in supportedLanguages) {
-    final languageColumnIndex = header.indexOf(language);
+      final languageColumnIndex = header.indexOf(language);
       if (contents[language] == null) {
         contents[language] = <String, dynamic>{};
       }
