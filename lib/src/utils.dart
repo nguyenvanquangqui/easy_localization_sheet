@@ -1,9 +1,10 @@
 import 'dart:io';
 
-import 'package:easy_localization_sheet/configs.dart';
+import 'package:easy_localization_sheet/src/configs.dart';
 import 'package:path/path.dart' as path;
 import 'package:yaml/yaml.dart';
 
+/// Get config from pubspec.yaml
 Configs getConfig() {
   final currentPath = Directory.current.path;
   final pubspecYamlFile = File(path.join(currentPath, 'pubspec.yaml'));
@@ -27,6 +28,7 @@ Configs getConfig() {
   );
 }
 
+/// Get csv file from given url
 Future<File> getCSVSheet({
   required String url,
   File? destFile,
@@ -45,6 +47,7 @@ Future<File> getCSVSheet({
   return file;
 }
 
+/// Get template dir
 Directory getTempDir({String? forPackage}) {
   final tempDir = Directory(
     path.join(

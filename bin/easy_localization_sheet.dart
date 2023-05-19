@@ -1,7 +1,7 @@
 import 'dart:io';
 
-import 'package:easy_localization_sheet/sheet_parser.dart' as sheet_parser;
-import 'package:easy_localization_sheet/utils.dart' as utils;
+import 'package:easy_localization_sheet/src/sheet_parser.dart' as sheet_parser;
+import 'package:easy_localization_sheet/src/utils.dart' as utils;
 
 void main(List<String> arguments) async {
   final configs = utils.getConfig();

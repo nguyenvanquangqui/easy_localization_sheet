@@ -1,7 +1,7 @@
 import 'dart:io';
 
-import 'package:easy_localization_sheet/sheet_parser.dart' as parser;
-import 'package:easy_localization_sheet/utils.dart' as utils;
+import 'package:easy_localization_sheet/src/sheet_parser.dart' as parser;
+import 'package:easy_localization_sheet/src/utils.dart' as utils;
 import 'package:path/path.dart' as path;
 import 'package:test/test.dart';
 

@@ -1,3 +1,4 @@
+// Config for parser
 class Configs {
   final String csvUrl;
   final String? outputDir;
