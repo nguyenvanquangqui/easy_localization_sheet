@@ -1,0 +1,16 @@
+{
+  "message": "Hello!",
+  "gender": {
+    "male": "Male",
+    "female": "Female"
+  },
+  "fullName": "Full Name",
+  "emptyNameError": "Please fill in your @.lower:fullName",
+  "money": {
+    "zero": "You not have money",
+    "one": "You have {} dollar",
+    "many": "You have {} dollars",
+    "other": "You have {} dollars"
+  },
+  "multiLineText": "This is\nmulti-line\ntext"
+}
