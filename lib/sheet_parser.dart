@@ -18,25 +18,18 @@ void parseSheet({required File sheetFile, String? outputRelatedPath}) {
     throw Exception('Invalid csv');
   }
 
-  final languageColumnIndexes = <String, int>{};
   final supportedLanguages = header.toList()..removeAt(0);
   supportedLanguages.removeWhere((element) => element.startsWith('('));
 
   if (supportedLanguages.isEmpty) {
     throw Exception('Supported languages not found');
   }
-  for (final language in supportedLanguages) {
-    languageColumnIndexes[language] = header.indexOf(language);
-  }
 
   final contents = {};
   for (int rowIndex = 1; rowIndex < rows.length; rowIndex++) {
     final row = rows[rowIndex].map((e) => e.toString()).toList();
     for (var language in supportedLanguages) {
-      final languageColumnIndex = languageColumnIndexes[language];
-      if (languageColumnIndex == null) {
-        continue;
-      }
+    final languageColumnIndex = header.indexOf(language);
       if (contents[language] == null) {
         contents[language] = <String, dynamic>{};
       }

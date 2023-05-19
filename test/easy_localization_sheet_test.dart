@@ -5,22 +5,6 @@ import 'package:easy_localization_sheet/utils.dart' as utils;
 import 'package:path/path.dart' as path;
 import 'package:test/test.dart';
 
-const expectedResultInEn = '''{
-  "message": "Hello!",
-  "gender": {
-    "male": "Male",
-    "female": "Female"
-  },
-  "fullName": "Full Name",
-  "emptyNameError": "Please fill in your @.lower:fullName",
-  "money": {
-    "zero": "You not have money",
-    "one": "You have {} dollar",
-    "many": "You have {} dollars",
-    "other": "You have {} dollars"
-  }
-}''';
-
 void main() {
   test(
     'Load config',
@@ -42,7 +26,7 @@ void main() {
       if (!downloadDir.existsSync()) {
         downloadDir.createSync(recursive: true);
       }
-      final destFile = File(path.join(downloadDir.path, 'source.cvs'));
+      final destFile = File(path.join(downloadDir.path, 'downloaded.csv'));
       if (destFile.existsSync()) {
         destFile.deleteSync();
       }
@@ -76,6 +60,9 @@ void main() {
 
     final enFile = File(path.join(outputDir.path, 'en.json'));
     expect(enFile.existsSync(), true);
+    final expectedResultInEn = File(
+      path.join(Directory.current.path, 'assets', 'validated_result.json'),
+    ).readAsStringSync();
     expect(enFile.readAsStringSync(), expectedResultInEn);
   });
 }
