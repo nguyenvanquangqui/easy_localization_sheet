@@ -1,6 +1,6 @@
 name: easy_localization_sheet
 description: A tool to help generate json from csv file. It is useful when used with localization packages.
-version: 1.0.1
+version: 1.0.2
 repository: https://github.com/nguyenvanquangqui/easy_localization_sheet
 
 environment:
@@ -19,3 +19,6 @@ dev_dependencies:
 easy_localization_sheet:
   csv_url: 'https://docs.google.com/spreadsheets/d/1p6oQw6BKObb3RU_fIWskJjofRzEb01cfzfNE14Px4nw/export?format=csv'
   output_dir: 'generated'
+  easy_localization_generate: # Optional, remove this block to disable
+    output_dir: lib/generated
+    output_file_name: locale_keys.g.dart

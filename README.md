@@ -19,6 +19,9 @@ Add below section to your `pubspec.yaml`
 easy_localization_sheet:
     csv_url: 'your url'
     output_dir: 'assets/translations' # Optional, default is assets
+    easy_localization_generate: # For use easy_localization:generate command, remove this block to disable
+        output_dir: lib/generated
+        output_file_name: locale_keys.g.dart
 ```
 
 Then run `dart run easy_localization_sheet` or `flutter pub run easy_localization_sheet`

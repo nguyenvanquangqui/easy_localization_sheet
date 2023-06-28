@@ -1,3 +1,6 @@
+## 1.0.2
+- Provide options to use with easy_localization:generate
+
 ## 1.0.1
 
 - Apply dart analyzer hint

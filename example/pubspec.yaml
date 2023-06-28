@@ -14,3 +14,6 @@ dev_dependencies:
 easy_localization_sheet:
   csv_url: 'https://docs.google.com/spreadsheets/d/1p6oQw6BKObb3RU_fIWskJjofRzEb01cfzfNE14Px4nw/export?format=csv'
   output_dir: 'assets/translations' # Optional, default is assets
+  easy_localization_generate: # Optional, remove this block to disable
+    output_dir: lib/generated
+    output_file_name: locale_keys.g.dart

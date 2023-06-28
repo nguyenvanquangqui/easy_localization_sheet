@@ -12,9 +12,18 @@ Configs getConfig() {
   final easyLocalizationSheetConfigs = pubspecYaml['easy_localization_sheet'];
   String? csvUrl;
   String? outputDir;
+  bool useEasyLocalizationGen = false;
+  String? easyLocalizationGenOutputDir;
+  String? easyLocalizationOutputFileName;
   if (easyLocalizationSheetConfigs != null) {
     csvUrl = easyLocalizationSheetConfigs['csv_url'];
     outputDir = easyLocalizationSheetConfigs['output_dir'];
+
+    final generatorConfig =
+        easyLocalizationSheetConfigs['easy_localization_generate'];
+    useEasyLocalizationGen = generatorConfig != null;
+    easyLocalizationGenOutputDir = generatorConfig?['output_dir'];
+    easyLocalizationOutputFileName = generatorConfig?['output_file_name'];
   }
 
   if (csvUrl == null) {
@@ -25,6 +34,9 @@ Configs getConfig() {
     csvUrl: csvUrl,
     outputDir: outputDir,
     packageName: pubspecYaml['name'],
+    useEasyLocalizationGen: useEasyLocalizationGen,
+    easyLocalizationGenOutputDir: easyLocalizationGenOutputDir,
+    easyLocalizationGenOutputFileName: easyLocalizationOutputFileName,
   );
 }
 

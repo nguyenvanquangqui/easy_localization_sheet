@@ -7,7 +7,7 @@ import 'package:path/path.dart' as path;
 /// Parse content of csv file and write to destination file
 /// [sheetFile] csv source file
 /// [outputRelatedPath] output path
-void parseSheet({required File sheetFile, String? outputRelatedPath}) {
+void parseSheet({required File sheetFile, required String outputRelatedPath}) {
   final input = sheetFile.readAsStringSync();
   final rows = CsvToListConverter().convert(input);
   if (rows.length < 2) {
@@ -52,7 +52,7 @@ void parseSheet({required File sheetFile, String? outputRelatedPath}) {
   final outputDir = Directory(
     path.join(
       Directory.current.path,
-      outputRelatedPath ?? 'assets',
+      outputRelatedPath,
     ),
   );
   final encoder = JsonEncoder.withIndent('  ');
