@@ -82,6 +82,9 @@ void appendContents({
     final key = nestedKeys[nestedLevel];
 
     if (nestedLevel == nestedKeys.length - 1) {
+      if (nestedContent[key] != null) {
+        stdout.writeln('WARNING: Duplicate key [$language]-[$fullKey]');
+      }
       nestedContent[key] = languageValue;
     } else {
       var content = nestedContent[key] as Map<String, dynamic>?;

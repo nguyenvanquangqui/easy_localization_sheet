@@ -1,3 +1,6 @@
+## 1.0.3
+- Show warning for duplicated key
+
 ## 1.0.2
 - Provide options to use with easy_localization:generate
 
