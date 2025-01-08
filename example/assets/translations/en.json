@@ -11,5 +11,6 @@
     "one": "You have {} dollar",
     "many": "You have {} dollars",
     "other": "You have {} dollars"
-  }
+  },
+  "multiLineText": "This is\nmulti-line\ntext"
 }

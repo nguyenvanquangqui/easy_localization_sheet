@@ -11,5 +11,6 @@
     "one": "Bạn có {} đô la",
     "many": "Bạn có {} đô la",
     "other": "Bạn có {} đô la"
-  }
+  },
+  "multiLineText": "Đây là nội dung\ncó\nnhiều\ndòng"
 }
