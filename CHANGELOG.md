@@ -1,3 +1,6 @@
+## 1.1.0
+- Bump version
+
 ## 1.0.3
 - Show warning for duplicated key
 

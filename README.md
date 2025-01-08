@@ -26,7 +26,7 @@ easy_localization_sheet:
 
 Then run `dart run easy_localization_sheet` or `flutter pub run easy_localization_sheet`
 ### Example
-![csv example file](https://github.com/nguyenvanquangqui/easy_localization_sheet/blob/master/images/sheet_screenshot.png)
+![csv example file](https://raw.githubusercontent.com/nguyenvanquangqui/easy_localization_sheet/master/images/sheet_screenshot.png)
 
 Google sheet example:
 1. Make google sheet public
@@ -35,7 +35,7 @@ Google sheet example:
 4. Run `dart run easy_localization_sheet`
 
 ### Syntax
-- `key` column is required, row contains `key` also called header.
+- `key` column is required, The row contains `key` also called header.
 - Rows above header will be ignored
 - Ignore column should be put into `()`, example `(your column name)`
 - Nested keys
