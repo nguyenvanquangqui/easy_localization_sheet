@@ -1,3 +1,8 @@
+## 2.0.0
+- **BREAKING CHANGE**
+  - Bump major version
+  - Sheet syntax change: Use merged cell as parent key instead dot as nested separator 
+
 ## 1.1.0
 - Bump version
 
