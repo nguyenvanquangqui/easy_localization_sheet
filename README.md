@@ -4,7 +4,7 @@ Download the csv file and generate json files for [easy_localization](https://pu
 
 ### Installation
 Add to your project:
-`dart pub add --dev easy_localization_sheet` or `dart pub add --dev easy_localization_sheet`
+`dart pub add --dev easy_localization_sheet` or `flutter pub add --dev easy_localization_sheet`
 Your `pubspec.yaml` will look like below:
 ```
 dependencies:
@@ -24,9 +24,9 @@ easy_localization_sheet:
         output_file_name: locale_keys.g.dart
 ```
 
-Then run `dart run easy_localization_sheet` or `flutter pub run easy_localization_sheet`
+Then run `dart run easy_localization_sheet`
 ### Example
-![csv example file](https://raw.githubusercontent.com/nguyenvanquangqui/easy_localization_sheet/master/images/sheet_screenshot.png)
+![csv example file](https://raw.githubusercontent.com/nguyenvanquangqui/easy_localization_sheet/v2/images/sheet_screenshot.png)
 
 Google sheet example:
 1. Make google sheet public
@@ -38,17 +38,12 @@ Google sheet example:
 - `key` column is required, The row contains `key` also called header.
 - Rows above header will be ignored
 - Ignore column should be put into `()`, example `(your column name)`
-- Nested keys
-```
-# key name
-gender.male
-gender.female
-```
-```
-# generated json
-"gender": {
-    "male": "Male",
-    "female": "Female"
-}
-```
-[Visit example sheet for more detail](https://docs.google.com/spreadsheets/d/1p6oQw6BKObb3RU_fIWskJjofRzEb01cfzfNE14Px4nw/edit#gid=0)
+- Nested keys: see `gender` and `money` in example
+
+[Visit example sheet for more detail](https://docs.google.com/spreadsheets/d/1p6oQw6BKObb3RU_fIWskJjofRzEb01cfzfNE14Px4nw/edit?gid=1421763000)
+
+<details>
+  <summary>Migrate from V1</summary>
+  Use merged cell as parent key instead dot as nested separator.
+  Visit example sheet for more detail.
+</details>
