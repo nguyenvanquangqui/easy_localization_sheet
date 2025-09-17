@@ -41,8 +41,9 @@ void main(List<String> arguments) async {
     }
     stdout.writeln('Generate successful');
   } catch (e) {
-    print(e.toString());
-    rethrow;
+    stderr.writeln(e);
+    stdout.write('Parse sheet could not completed with above error');
+    exit(1);
   }
   exit(0);
 }
