@@ -12,7 +12,7 @@ void main() {
       final configs = utils.getConfig();
       expect(
         configs.csvUrl,
-        'https://docs.google.com/spreadsheets/d/1p6oQw6BKObb3RU_fIWskJjofRzEb01cfzfNE14Px4nw/export?format=csv',
+        'https://docs.google.com/spreadsheets/d/1p6oQw6BKObb3RU_fIWskJjofRzEb01cfzfNE14Px4nw/export?format=csv&gid=1421763000',
       );
     },
   );
@@ -32,7 +32,7 @@ void main() {
       }
       final file = await utils.getCSVSheet(
         url:
-            'https://docs.google.com/spreadsheets/d/1p6oQw6BKObb3RU_fIWskJjofRzEb01cfzfNE14Px4nw/export?format=csv',
+            'https://docs.google.com/spreadsheets/d/1p6oQw6BKObb3RU_fIWskJjofRzEb01cfzfNE14Px4nw/export?format=csv&gid=1421763000',
         destFile: destFile,
       );
       expect(file.existsSync(), true);
