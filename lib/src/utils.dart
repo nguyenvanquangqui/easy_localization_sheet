@@ -48,6 +48,11 @@ Future<File> getCSVSheet({
 }) async {
   final request = await HttpClient().getUrl(Uri.parse(url));
   final response = await request.close();
+  if (!response.isSuccess) {
+    throw Exception(
+      'Could not download file, status code = ${response.statusCode}',
+    );
+  }
   final file = destFile ??
       File(
         path.join(
@@ -55,6 +60,7 @@ Future<File> getCSVSheet({
           'data.csv',
         ),
       );
+
   await response.pipe(file.openWrite());
   return file;
 }
@@ -72,4 +78,10 @@ Directory getTempDir({String? forPackage}) {
     tempDir.createSync(recursive: true);
   }
   return tempDir;
+}
+
+extension on HttpClientResponse {
+  bool get isSuccess {
+    return (statusCode ~/ 100) == 2;
+  }
 }
