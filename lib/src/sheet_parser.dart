@@ -27,7 +27,8 @@ void parseSheet({required File sheetFile, required String outputRelatedPath}) {
           (e) => e.trim(),
         )
         .toList();
-    if (keyColumns.isEmpty) {
+    if (keyColumns.isEmpty || keyColumns.every((e) => e.isEmpty)) {
+      keyColumnsHistory.clear();
       continue;
     }
     if (keyColumns.first.isNotEmpty) {
